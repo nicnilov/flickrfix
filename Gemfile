@@ -40,7 +40,6 @@ group :development, :test do
   gem 'byebug'
   gem 'dotenv-rails'
   gem 'guard-ctags-bundler'
-  gem 'pry-rails'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
@@ -49,5 +48,6 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'pry-rails'
 gem 'rack-timeout'
 gem 'puma'
