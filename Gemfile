@@ -46,4 +46,5 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'rack-timeout'
 gem 'puma'
