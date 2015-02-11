@@ -37,7 +37,8 @@ group :production do
 end
 
 group :development, :test do
-  gem 'byebug'
+  # gem 'byebug'
+  # gem 'pry-byebug'
   gem 'dotenv-rails'
   gem 'guard-ctags-bundler'
 
