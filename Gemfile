@@ -10,6 +10,7 @@ gem 'bootstrap-sass', '~> 3.3.3'
 gem 'autoprefixer-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'font-awesome-sass', '~> 4.3.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
