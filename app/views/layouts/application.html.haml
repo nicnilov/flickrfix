@@ -17,13 +17,16 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
+    .left-stripes
+    .right-stripes
+    .stripes-mask
     .intro-header
       .container
         .row
           .col-lg-12
             .intro-message
               %h1 Flickr Fix
-              %h3 Sign in via social network
+              %h4 Sign in via social network
               %hr.intro-divider/
               %ul.list-inline.intro-social-buttons
                 %li
