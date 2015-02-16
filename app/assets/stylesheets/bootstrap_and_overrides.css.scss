@@ -59,7 +59,7 @@ h6 {
 
 .intro-message {
     position: relative;
-    padding-top: 20%;
+    padding-top: 7%;
     padding-bottom: 20%;
 }
 
@@ -80,7 +80,22 @@ h6 {
     margin-top: 24px;
 }
 
+.intro-description {
+    font-size: 14px;
+    font-weight: 400;
+    width: 400px;
+    color: #a3a3a3;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 7%;
+}
+
 @media(max-width:767px) {
+    .intro-header {
+        padding-top: 20px;
+    }
+
     .intro-message {
         padding-bottom: 15%;
     }
@@ -101,6 +116,11 @@ h6 {
 
     .intro-divider {
         width: 100%;
+    }
+
+    .intro-description {
+        width: 300px;
+        padding-bottom: 5%;
     }
 }
 
