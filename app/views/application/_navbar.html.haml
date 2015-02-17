@@ -1,0 +1,21 @@
+%nav.navbar.navbar-default.navbar-fixed-top.topnav{:role => "navigation"}
+  .container.topnav
+    / Brand and toggle get grouped for better mobile display
+    .navbar-header
+      %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand.topnav{:href => "#"} Start Bootstrap
+    / Collect the nav links, forms, and other content for toggling
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %a{:href => "#about"} About
+        %li
+          %a{:href => "#services"} Services
+        %li
+          %a{:href => "#contact"} Contact
+    / /.navbar-collapse
+  / /.container
