@@ -11,10 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150206184045) do
+ActiveRecord::Schema.define(version: 20150219161101) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "flickr_accounts", force: :cascade do |t|
+    t.string   "username"
+    t.string   "realname"
+    t.string   "nsid"
+    t.integer  "icon_farm"
+    t.integer  "icon_server"
+    t.string   "oauth_token"
+    t.string   "oauth_token_secret"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
+  add_index "flickr_accounts", ["username"], name: "index_flickr_accounts_on_username", unique: true, using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
@@ -25,5 +39,8 @@ ActiveRecord::Schema.define(version: 20150206184045) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["provider", "uid"], name: "index_users_on_provider_and_uid", unique: true, using: :btree
 
 end

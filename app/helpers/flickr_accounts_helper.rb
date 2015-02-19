@@ -1,0 +1,2 @@
+module FlickrAccountsHelper
+end
