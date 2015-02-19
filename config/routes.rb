@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
+  root 'static#index'
+
+  get 'home', to: 'home#index'
 
   match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   match 'auth/failure', to: redirect('/'), via: [:get, :post]
