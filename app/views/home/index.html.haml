@@ -1,6 +1,9 @@
-- if current_user
-  Signed in as
-  %strong= current_user.name
-  = link_to 'Sign out', signout_path, id: 'sign_out'
+-if current_flickr_account.present?
+  %p design albums grid
 -else
-  = render 'signin'
+  .center-block
+    .container
+      .row
+        .col-lg-12
+          %a.btn.btn-default{id: 'add-flickr-account', :href => "#"}
+            %span Connect Flickr Account
