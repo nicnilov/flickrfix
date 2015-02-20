@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :flickr_accounts
+
   validates_uniqueness_of :email
   validates_uniqueness_of [:provider, :uid]
 
