@@ -19,6 +19,7 @@ class ApplicationController < ActionController::Base
         @current_flickr_account = current_user.flickr_accounts.first
         session[:flickr_account_id] = @current_flickr_account.id if @current_flickr_account.present?
       end
+      @current_flickr_account
     end
   end
   helper_method :current_flickr_account

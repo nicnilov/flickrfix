@@ -21,6 +21,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'pg'
 gem 'omniauth-facebook'
+gem 'httparty'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -33,6 +34,7 @@ group :development, :test do
   # gem 'pry-byebug'
   gem 'dotenv-rails'
   gem 'guard-ctags-bundler'
+  gem 'quiet_assets'
 
   gem 'web-console', '~> 2.0'
 
@@ -45,5 +47,5 @@ group :production do
 end
 
 gem 'pry-rails'
-gem 'rack-timeout'
+# gem 'rack-timeout' # uncomment initializers/timeout.rb
 gem 'puma'

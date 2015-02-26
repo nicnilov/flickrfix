@@ -39,4 +39,7 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  ENV['FLICKR_CONSUMER_KEY'] = 'aa68897727fe07c8b9fd73fe22a07e6f'
+  ENV['FLICKR_CONSUMER_SECRET'] = '10ddd87f67f03e64'
 end
