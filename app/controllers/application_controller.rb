@@ -1,3 +1,5 @@
+require_dependency('flickrapi')
+
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -23,4 +25,15 @@ class ApplicationController < ActionController::Base
     end
   end
   helper_method :current_flickr_account
+
+  def flickrapi(oauth_token = nil, oauth_token_secret = nil)
+    @flickrapi ||= FlickrApi.new({
+      consumer_key: ENV['FLICKR_CONSUMER_KEY'],
+      consumer_secret: ENV['FLICKR_CONSUMER_SECRET'],
+      oauth_token: oauth_token,
+      oauth_token_secret: oauth_token_secret,
+      oauth_callback: callback_flickr_accounts_url,
+      debug_output: $stdout
+    })
+  end
 end

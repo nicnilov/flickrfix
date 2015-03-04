@@ -1,5 +1,8 @@
 -if current_flickr_account.present?
-  %p design albums grid
+  .albums
+    - @albums.each do |album|
+      .albums-element
+        %p #{ album['title']['_content'] }
 -else
   .center-block
     .container

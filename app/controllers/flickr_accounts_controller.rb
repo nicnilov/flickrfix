@@ -28,17 +28,4 @@ class FlickrAccountsController < ApplicationController
 
     redirect_to home_path
   end
-
-  protected
-
-  def flickrapi(oauth_token = nil, oauth_token_secret = nil)
-    @flickrapi ||= FlickrApi.new({
-      consumer_key: ENV['FLICKR_CONSUMER_KEY'],
-      consumer_secret: ENV['FLICKR_CONSUMER_SECRET'],
-      oauth_token: oauth_token,
-      oauth_token_secret: oauth_token_secret,
-      oauth_callback: callback_flickr_accounts_url,
-      debug_output: $stdout
-    })
-  end
 end
