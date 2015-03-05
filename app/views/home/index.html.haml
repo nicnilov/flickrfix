@@ -1,8 +1,11 @@
 -if current_flickr_account.present?
   .albums
     - @albums.each do |album|
-      .albums-element
-        %p #{ album['title']['_content'] }
+      .albums-element{style: "width: 200px; height: 200px; background-image: url(#{ album['background_image'] });"}
+        .albums-element-case
+          .albums-element-text
+            %h4 #{ album['title']['_content'] }
+            %p #{ album['stats'] }
 -else
   .center-block
     .container
