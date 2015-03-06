@@ -1,1 +1,8 @@
-%p #{ @videos.size }
+.videos
+  - @videos.each do |video|
+    .videos-element{style: "width: 400px; height: 300px; background-image: url(#{ video['url_m'] });"}
+      .albums-element-case
+        .albums-element-link
+          .albums-element-text
+            %h4 #{ video['title']['_content'] }
+            %p #{ video['stats'] }

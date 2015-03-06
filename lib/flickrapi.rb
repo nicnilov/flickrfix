@@ -21,7 +21,7 @@ class FlickrApi
 
   def list_album_videos(album_id)
     response = api_request(:get, {method: 'flickr.photosets.getPhotos', photoset_id: album_id, media: 'videos',
-                                  extras: 'date_upload,date_taken,url_t'})
+                                  extras: 'date_upload,date_taken,url_m'})
     response['photoset']['photo']
   end
 
