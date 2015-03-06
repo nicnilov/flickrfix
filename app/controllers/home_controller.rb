@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+
   def index
     if current_flickr_account.present?
       flickr_account = FlickrAccount.find(current_flickr_account)
@@ -12,4 +13,5 @@ class HomeController < ApplicationController
       end.compact
     end
   end
+
 end

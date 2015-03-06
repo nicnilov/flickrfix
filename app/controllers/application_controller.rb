@@ -42,4 +42,5 @@ class ApplicationController < ActionController::Base
   def authenticated?
     redirect_to root_path unless current_user.present?
   end
+
 end
