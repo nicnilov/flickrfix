@@ -3,9 +3,11 @@
     - @albums.each do |album|
       .albums-element{style: "width: 200px; height: 200px; background-image: url(#{ album['background_image'] });"}
         .albums-element-case
-          .albums-element-text
-            %h4 #{ album['title']['_content'] }
-            %p #{ album['stats'] }
+          .albums-element-link
+            = link_to image_tag('spaceball.gif'), album_path(id: album['id'])
+            .albums-element-text
+              %h4 #{ album['title']['_content'] }
+              %p #{ album['stats'] }
 -else
   .center-block
     .container
